@@ -4,7 +4,22 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  const copy = str.toLowerCase();
+  
+  let newStr = "";
+  let revStr = "";
+
+  for (let i = 0; i < copy.length; i++){
+    if(copy.charCodeAt(i) >= 97  && copy.charCodeAt(i) <= 122){
+      newStr += copy.charAt(i);
+      revStr = copy.charAt(i) + revStr;
+    }
+  }
+
+  if(newStr === revStr){
+    return true;
+  }
+  return false;
 }
 
 module.exports = isPalindrome;
