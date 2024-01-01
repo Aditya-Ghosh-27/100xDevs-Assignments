@@ -14,7 +14,7 @@ const counter = function(n){
 
 counter(10);
 
-// While loop conversio
+// While loop conversion
 let count = 1;
 const n = 10; // You can set the desired value of n
 
