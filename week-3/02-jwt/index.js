@@ -40,7 +40,13 @@ function signJwt(username, password) {
  *                    using the secret key.
  */
 function verifyJwt(token) {
-    // Your code here
+    let ans = true;
+    try{
+        jwt.verify(token, jwtPassword);
+    } catch(e){
+        ans =false;
+    }
+    return ans;
 }
 
 /**
