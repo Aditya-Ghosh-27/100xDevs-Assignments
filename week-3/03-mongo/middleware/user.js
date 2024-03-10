@@ -13,7 +13,7 @@ function userMiddleware(req, res, next) {
         if(value){
             next();
         } else{
-            res.sendStatus(403).json({
+            res.sendStatus(404).json({
                 msg: "User doesn't exist"
             })
         }

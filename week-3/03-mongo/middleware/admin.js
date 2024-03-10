@@ -15,7 +15,7 @@ function adminMiddleware(req, res, next) {
         } else{
             res.json({
                 msg: "Admin doesn't exist"
-            })
+            }).sendStatus(404)
         }
     })
 }
